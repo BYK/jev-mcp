@@ -41,6 +41,23 @@ Or in a `mcp.json`-style config:
 }
 ```
 
+For [opencode](https://opencode.ai), in `~/.config/opencode/opencode.json` (or a
+project-level `opencode.json`):
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+    "jev": {
+      "type": "local",
+      "command": ["npx", "-y", "jev-eval-mcp"],
+      "enabled": true,
+      "environment": { "TYPESAFE_API_KEY": "{env:TYPESAFE_API_KEY}" }
+    }
+  }
+}
+```
+
 From a clone, build first (`npm install && npm run build`) and point the client at
 `node /path/to/jev-mcp/dist/index.js` instead.
 
