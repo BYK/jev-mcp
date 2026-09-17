@@ -1,0 +1,35 @@
+{
+  "name": "jev-mcp",
+  "version": "0.1.0",
+  "description": "Eval-first MCP server for TypeSafe's Jev: prototype typed questions, map them over many items, and measure them against labeled fixtures.",
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "jev-mcp": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.build.json",
+    "typecheck": "tsc -p tsconfig.json",
+    "lint": "eslint .",
+    "test": "node --test test/*.test.ts",
+    "smoke": "node scripts/smoke.ts",
+    "start": "node dist/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "1.30.0",
+    "zod": "4.6.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.13.4",
+    "eslint": "10.10.0",
+    "typescript": "6.0.3",
+    "typescript-eslint": "8.70.0"
+  }
+}

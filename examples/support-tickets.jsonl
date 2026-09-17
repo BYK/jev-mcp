@@ -1,0 +1,16 @@
+{"id": "t1", "state": "Help! My payouts have been failing for 3 days and customers are complaining.", "label": true}
+{"id": "t2", "state": "Quick question — where can I find last quarter's invoices in the dashboard?", "label": false}
+{"id": "t3", "state": "Our production checkout is down since the 4.2 upgrade. We are losing orders every minute.", "label": true}
+{"id": "t4", "state": "Loving the new analytics view. Any plans to add CSV export?", "label": false}
+{"id": "t5", "state": "We were double charged this morning. Please refund before our board meeting tomorrow.", "label": true}
+{"id": "t6", "state": "Is there a student discount on the team plan?", "label": false}
+{"id": "t7", "state": "API keys stopped working after the rotation. Every request returns 401 and our nightly job is blocked.", "label": true}
+{"id": "t8", "state": "Following up on my ticket from last week, no rush at all.", "label": false}
+{"id": "t9", "state": "The docs for webhooks have a typo in the retry section.", "label": false}
+{"id": "t10", "state": "Data export has been stuck in pending for 6 hours and the audit is due Friday.", "label": true}
+{"id": "t11", "state": "Can you explain how seats are counted for annual billing?", "label": false}
+{"id": "t12", "state": "Security scan flagged an exposed endpoint on our account. Need someone on this today.", "label": true}
+{"id": "t13", "state": "We are evaluating your product against two competitors and would like a call next month.", "label": false}
+{"id": "t14", "state": "Dashboard loads slowly in the afternoon, maybe 4-5 seconds. Not blocking us.", "label": false}
+{"id": "t15", "state": "All webhook deliveries have been failing since 09:00 UTC, retries exhausted, orders not syncing.", "label": true}
+{"id": "t16", "state": "Please close my account whenever you get a chance.", "label": false}
