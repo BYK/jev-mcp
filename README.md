@@ -1,4 +1,4 @@
-# jev-mcp
+# jev-eval-mcp
 
 An eval-first MCP server for [TypeSafe's Jev](https://docs.typesafe.ai), a System One model that
 returns typed judgments (`noul`, `choice`, `score`) with probabilities instead of generated text.
@@ -21,14 +21,10 @@ reason a classifier gate misbehaves in production.
 
 Requires Node 20+ and a TypeSafe API key from https://console.typesafe.ai/settings/keys.
 
-```bash
-npm install && npm run build
-```
-
-Then register the server with your MCP client. Claude Code:
+Register the server with your MCP client. Claude Code:
 
 ```bash
-claude mcp add jev -e TYPESAFE_API_KEY=sk-... -- node /path/to/jev-mcp/dist/index.js
+claude mcp add jev -e TYPESAFE_API_KEY=sk-... -- npx -y jev-eval-mcp
 ```
 
 Or in a `mcp.json`-style config:
@@ -37,13 +33,16 @@ Or in a `mcp.json`-style config:
 {
   "mcpServers": {
     "jev": {
-      "command": "node",
-      "args": ["/path/to/jev-mcp/dist/index.js"],
+      "command": "npx",
+      "args": ["-y", "jev-eval-mcp"],
       "env": { "TYPESAFE_API_KEY": "sk-..." }
     }
   }
 }
 ```
+
+From a clone, build first (`npm install && npm run build`) and point the client at
+`node /path/to/jev-mcp/dist/index.js` instead.
 
 Environment: `TYPESAFE_API_KEY` (required), `JEV_MODEL` (default `jev-latest`),
 `TYPESAFE_BASE_URL` (default `https://api.typesafe.ai`).

@@ -1,5 +1,5 @@
 {
-  "name": "jev-mcp",
+  "name": "jev-eval-mcp",
   "version": "0.1.0",
   "description": "Eval-first MCP server for TypeSafe's Jev: prototype typed questions, map them over many items, and measure them against labeled fixtures.",
   "license": "MIT",
@@ -24,7 +24,7 @@
   ],
   "type": "module",
   "bin": {
-    "jev-mcp": "dist/index.js"
+    "jev-eval-mcp": "dist/index.js"
   },
   "files": [
     "dist/",

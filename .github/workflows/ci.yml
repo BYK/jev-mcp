@@ -43,5 +43,5 @@ jobs:
       - uses: actions/upload-artifact@v7
         with:
           name: npm-tarball
-          path: jev-mcp-*.tgz
+          path: jev-eval-mcp-*.tgz
           if-no-files-found: error

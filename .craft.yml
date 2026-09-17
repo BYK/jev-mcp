@@ -1,4 +1,4 @@
-# Craft release config for `jev-mcp`.
+# Craft release config for `jev-eval-mcp`.
 #
 # Single-package, single-target: npm via OIDC trusted publishing. Craft
 # auto-bumps package.json, discovers the npm tarball from the
