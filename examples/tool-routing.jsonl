@@ -1,0 +1,12 @@
+{"id": "r1", "state": "Is 0.8 the right cutoff for my \"is this test flaky\" question? I have 120 runs I already labeled.", "label": "jev_eval"}
+{"id": "r2", "state": "Here's one PR description — tell me whether it reads as a breaking change.", "label": "jev_ask"}
+{"id": "r3", "state": "Go through all 400 open issues in the export and tell me which ones look like duplicates of a crash report.", "label": "jev_map"}
+{"id": "r4", "state": "I want to compare two wordings of my spam question and see which one has better precision on my fixtures.", "label": "jev_eval"}
+{"id": "r5", "state": "Rank these 60 changed files by how likely each is to need a security review, then show me the top 10.", "label": "jev_map"}
+{"id": "r6", "state": "Try this question out on one example first so I can see the probabilities before I wire it into anything.", "label": "jev_ask"}
+{"id": "r7", "state": "How calibrated is the model on my dataset? I want Brier and a confusion matrix.", "label": "jev_eval"}
+{"id": "r8", "state": "Classify every row of support-tickets.jsonl by owning team and write the full output to disk.", "label": "jev_map"}
+{"id": "r9", "state": "What severity level would the model give this stack trace, and how confident is it?", "label": "jev_ask"}
+{"id": "r10", "state": "Which of these two instruction phrasings misclassifies fewer of my labeled examples?", "label": "jev_eval"}
+{"id": "r11", "state": "I have a folder of 200 log excerpts and want a count of how many mention customer data.", "label": "jev_map"}
+{"id": "r12", "state": "Show me the full probability distribution for a single choice question on this one commit message.", "label": "jev_ask"}
