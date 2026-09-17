@@ -1,20 +1,43 @@
 {
-  "name": "jev-mcp",
+  "name": "jev-eval-mcp",
   "version": "0.1.0",
   "description": "Eval-first MCP server for TypeSafe's Jev: prototype typed questions, map them over many items, and measure them against labeled fixtures.",
   "license": "MIT",
+  "author": "BYK",
+  "homepage": "https://github.com/BYK/jev-mcp#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BYK/jev-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/BYK/jev-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "typesafe",
+    "jev",
+    "system-one",
+    "classifier",
+    "evaluation",
+    "calibration"
+  ],
   "type": "module",
   "bin": {
-    "jev-mcp": "dist/index.js"
+    "jev-eval-mcp": "dist/index.js"
   },
   "files": [
-    "dist"
+    "dist/",
+    "README.md",
+    "LICENSE"
   ],
   "engines": {
     "node": ">=20"
   },
   "scripts": {
     "build": "tsc -p tsconfig.build.json",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build",
     "typecheck": "tsc -p tsconfig.json",
     "lint": "eslint .",
     "test": "node --test test/*.test.ts",

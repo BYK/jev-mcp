@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-/** jev-mcp: an eval-first MCP server for TypeSafe's Jev model. */
+/** jev-eval-mcp: an eval-first MCP server for TypeSafe's Jev model. */
 
 import { realpath } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
@@ -68,7 +68,7 @@ function errorResult(error: unknown): {
 
 export function createServer(client: TypeSafeClient): McpServer {
   const server = new McpServer(
-    { name: "jev-mcp", version: SERVER_VERSION },
+    { name: "jev-eval-mcp", version: SERVER_VERSION },
     {
       instructions:
         "Jev returns typed judgments (noul / choice / score) with calibrated probabilities. " +
@@ -221,7 +221,7 @@ async function main(): Promise<void> {
   const apiKey = process.env["TYPESAFE_API_KEY"];
   if (apiKey === undefined || apiKey.trim() === "") {
     process.stderr.write(
-      "jev-mcp: TYPESAFE_API_KEY is not set. Some MCP clients filter the environment before " +
+      "jev-eval-mcp: TYPESAFE_API_KEY is not set. Some MCP clients filter the environment before " +
         "spawning servers; set it explicitly in the server's env block. Keys: " +
         "https://console.typesafe.ai/settings/keys\n",
     );
