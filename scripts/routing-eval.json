@@ -1,0 +1,24 @@
+{
+  "dataset_path": "examples/tool-routing.jsonl",
+  "max_errors": 4,
+  "variants": {
+    "shipped": {
+      "type": "choice",
+      "instructions": "An agent using the jev-mcp server received this user request. Which of its tools should the agent call?",
+      "criteria": {
+        "jev_ask": "Run a question set once against a single state and see the typed answers with their probability distributions. Use it to prototype question wording before committing it to code or to jev_eval. Questions over the same state are answered independently in one request, so ask several at once.",
+        "jev_map": "Judge every item in a list and get back one compact row per item, plus per-question aggregates. Built for triage and ranking at a scale where reading each item into context is the expensive part: filter, sort, or write the full results to disk and only pull back what matters.",
+        "jev_eval": "Score one or more wordings of a question against labeled items and report accuracy, calibration (Brier, ECE, AUC), a full threshold sweep for noul questions, an abstention curve for choice and score questions, and the worst misses. Run this before hard-coding any threshold, and rerun it after changing wording or model version. Variants are asked in the same request, so comparing several is nearly free."
+      }
+    },
+    "terse": {
+      "type": "choice",
+      "instructions": "An agent using the jev-mcp server received this user request. Which of its tools should the agent call?",
+      "criteria": {
+        "jev_ask": "ask Jev a question about one state",
+        "jev_map": "run a question over many items",
+        "jev_eval": "measure a question against labeled examples"
+      }
+    }
+  }
+}

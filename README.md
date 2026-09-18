@@ -108,6 +108,15 @@ Thresholds are only as good as the dataset behind them, and they are tied to a m
 ```bash
 npm run typecheck && npm run lint && npm test   # metrics unit tests, no network
 npm run build && npm run smoke                  # live end-to-end over stdio, needs TYPESAFE_API_KEY
+node scripts/call.ts jev_ask '{"state": "...", "questions": {}}'   # drive one tool by hand
+```
+
+The tool descriptions in this server are themselves measured with `jev_eval`: `examples/tool-routing.jsonl`
+holds labeled requests and `scripts/routing-eval.json` compares the shipped descriptions against a terse
+variant, so a reworded description can be checked for routing regressions instead of argued about.
+
+```bash
+node scripts/call.ts jev_eval - < scripts/routing-eval.json
 ```
 
 MIT licensed.
